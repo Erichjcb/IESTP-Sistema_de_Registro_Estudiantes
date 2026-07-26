@@ -1,0 +1,3 @@
+for i in range(1,10):
+    print(f'{i} * 9 = {i*9}')
+    

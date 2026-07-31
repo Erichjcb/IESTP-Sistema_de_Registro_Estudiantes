@@ -7,12 +7,13 @@ document.addEventListener("DOMContentLoaded", function(){
     // CAPTURAR ELEMENTOS HTML
     // ==========================
     const formulario = document.getElementById("formulario");
-    const nombre = document.getElementById("nombre");
-    const apellido = document.getElementById("apellido");
+    const nombres = document.getElementById("nombres");
+    const apellidoPaterno = document.getElementById("apellidoPaterno");
+    const apellidoMaterno = document.getElementById("apellidoMaterno");
     const edad = document.getElementById("edad");
     const carrera = document.getElementById("carrera");
     const tabla = document.querySelector("#tabla tbody");
-    const buscar = document.getElementById("buscar"); // nuevo
+    const buscar = document.getElementById("buscar");
 
     // ==========================
     // ARREGLO DE ESTUDIANTES
@@ -27,16 +28,18 @@ document.addEventListener("DOMContentLoaded", function(){
 
         const estudiante = {
             id: Date.now(),
-            nombre: nombre.value,
-            apellido: apellido.value,
+            nombres: nombres.value,
+            apellidoPaterno: apellidoPaterno.value,
+            apellidoMaterno: apellidoMaterno.value,
             edad: edad.value,
             carrera: carrera.value
         };
 
         // Validar campos
         if(
-            estudiante.nombre === "" ||
-            estudiante.apellido === "" ||
+            estudiante.nombres === "" ||
+            estudiante.apellidoPaterno === "" ||
+            estudiante.apellidoMaterno === "" ||
             estudiante.edad === "" ||
             estudiante.carrera === ""
         ){
@@ -66,8 +69,9 @@ document.addEventListener("DOMContentLoaded", function(){
         estudiantes.forEach(function(estudiante){
             tabla.innerHTML += `
                 <tr>
-                    <td>${estudiante.nombre}</td>
-                    <td>${estudiante.apellido}</td>
+                    <td>${estudiante.nombres}</td>
+                    <td>${estudiante.apellidoPaterno}</td>
+                    <td>${estudiante.apellidoMaterno}</td>
                     <td>${estudiante.edad}</td>
                     <td>${estudiante.carrera}</td>
                     <td>
@@ -99,8 +103,9 @@ document.addEventListener("DOMContentLoaded", function(){
             return e.id === id;
         });
 
-        nombre.value = estudiante.nombre;
-        apellido.value = estudiante.apellido;
+        nombres.value = estudiante.nombres;
+        apellidoPaterno.value = estudiante.apellidoPaterno;
+        apellidoMaterno.value = estudiante.apellidoMaterno;
         edad.value = estudiante.edad;
         carrera.value = estudiante.carrera;
 

@@ -59,7 +59,7 @@ label{
     font-weight:bold;
 }
 
-input{
+input, select{
     padding:10px;
     margin-top:5px;
     border:1px solid #ccc;
@@ -81,6 +81,7 @@ button{
     font-size:16px;
     cursor:pointer;
     transition:.3s;
+    margin-right:5px; /* separación entre botones */
 }
 
 button:hover{
@@ -115,4 +116,26 @@ table tr:nth-child(even){
 
 table tr:hover{
     background:#dbeafe;
+}
+
+/* ==========================
+        BUSCADOR
+========================== */
+
+#buscar{
+    margin-bottom:20px;
+    padding:10px;
+    width:100%;
+    font-size:16px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
+/* ==========================
+        LOGO
+========================== */
+
+.contenedor img{
+    display:block;
+    margin:0 auto 20px;
 }

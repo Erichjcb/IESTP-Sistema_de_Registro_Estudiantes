@@ -1,5 +1,3 @@
-# IESTP-Sistema_de_Registro_Estudiantes
-
 # IESTP - Sistema de Registro de Estudiantes
 
 Este es un proyecto de aplicación web desarrollado para gestionar el registro de estudiantes de manera sencilla, rápida y organizada[cite: 1]. Fue creado como parte del proyecto final de curso de la Unidad Didáctica de Modelamiento del Software[cite: 1].
